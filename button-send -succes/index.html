@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="./button.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <button id="btn">
+        <p id="btnText">Send Message</p>
+        <div class="check-box">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+            <path fill="transparent" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+          </svg>
+        </div>
+      </button>
+    </div>
+  </body>
+   <script type="text/javascript">
+      const btn = document.querySelector("#btn");
+      const btnText = document.querySelector("#btnText");
+
+      btn.onclick = () => {
+        btnText.innerHTML = "Success";
+        btn.classList.add("success");
+
+        setInterval(() => {
+          btnText.innerHTML = "Send Message";
+          btn.classList.remove("success");
+        }, 5000);
+      };
+    </script>
+</html>
